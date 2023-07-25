@@ -1,0 +1,361 @@
+/* css reset. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+.all-content{
+    background: #f7f5f2;
+}
+
+
+/* ye humne apne scrollbar ko apne hesab se edit kiya hai.*/
+html ::-webkit-scrollbar-track{ /*Eska mtlb hai ki jo pura scrollbar rhega wo kis color ka rhega.*/
+    background: transparent;
+}
+html ::-webkit-scrollbar-thumb{ /*Eska mtlb hai ki jis jgha hai scrollbar uska color kya rhega.*/
+    background: #b2744c;
+    /* border-radius: 10px; */
+}
+html ::-webkit-scrollbar{ /*scrollbar ki width kya rhege.*/
+    width: 10px;
+}
+
+
+/* Navbar Style.*/
+#navbar{ /*Background color deya hai*/
+    background-color: #b2744c;
+}
+#logo img{ /*Navbar mein logo hai usko style kiya.*/
+    border-radius: 20px;
+    margin-left: 40px; 
+    width: 150px; 
+    height: 100px; 
+}
+.navbar-nav{ /*Jo humare home about etc hai wo left side hue ese.*/
+    margin-left: 150px;
+}
+.nav-item .nav-link{ /*ese humare jo home about etc hai wo style hue hai.*/
+    color: black; /*phle blue mein the ab black kre hai.*/
+    margin-left: 10px; /*unko beach mein se left kiya hai.*/
+    font-weight: bold; /*size bold kiya hai font*/
+    font-size: large; 
+    transition: 0.5s; /*ese kya hoga jo wo neche hover mein property de hai jaise color deya hai or radius deya hai to 
+                        wo eske hesab se response krege.*/
+}
+.nav-item .nav-link:hover{ /*ye hover deya unhe home about vaalo pr.*/
+    background: white;
+    border-radius: 10px;
+    color: blue;
+}
+.navbar form button{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    transition: 0.5s;
+    font-weight: bold;
+}
+.navbar form button:hover{
+    background-color: white;
+    color: blue;
+    border-radius: 10px;
+    /* font-weight: bold; */
+}
+
+
+
+
+/* Home Section Style */
+#home{  /*Esme humne jo bg image de hai usse related style kra hai.*/
+    /* background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.0)),url(/image/bg1.jpg); */
+    background-image: url(/image/bg1.jpg);
+    width: 100%; /*bg image ki width or height set ki hai*/
+    height: 100vh;
+    background-repeat: no-repeat; /*image repeat hoti hai to wo na ho esliye ye kra.*/
+    background-size: cover; /*image ko bola hai ki cover mein ho.*/
+    background-position: 88%; /*bg ko position de hai.*/
+}
+#home .content{ /*eske under jo humare pure heading or paragraph hai usko style kra hai.*/
+    padding-top: 190px; /*jo lekha hua tha wo top se neche ko kra hai.*/
+    /* text-align: center; */
+    margin-left: 56px; /*lekehe hue ko left side mein kiya hai.*/
+}
+#home .content h3{ /*heading ko style kra hai.*/
+    font-size: 50px; /*heading ka font size deya*/
+    color: white; /*heading ko color deya*/
+}
+#home .content p{ /*heading ki baad jo paragraph usko style kra hai.*/
+    font-size: 30px; /*paragraph ko font size deya*/
+    color: white; /*color deya*/
+}
+#btn{ /*uske baad jo button hai usko style kra hai.*/
+    width: 150px; 
+    height: 40px;
+    /* margin-top: 20px; */
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    /* border: none; */
+}
+#btn:hover{ /*button mein hover effect deya hai.*/
+    background-color: #b2744c;
+    color: white;
+}
+
+
+
+
+/* About Section Style */
+#about{ /*about section ki width or height set ki*/
+    /* width: 100%; */
+    height: 90vh;
+}
+#about .container{ /*jo about hai usko container ki under daala hai to direct container ko top se neche kiya hai home se touch tha.*/
+    padding-top: 50px;
+}
+#about .heading{ /*About ki jo heading the jisme about lekha hua hai usko style kiya hai.*/
+    margin-bottom: 20px; /*About heading ke neche jgha hojaye jo neche image or about lekha hai eskiye deya,*/
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    border-bottom:2px solid #b2744c;
+}
+#about .heading span{ /*jo about hai uske under 2 color deye hai ese.*/
+    color: #b2744c;
+}
+#about .container .row{ /*about card hai uske neche krne ki leye heading se*/
+    padding-top: 30px;
+}
+#about .card{ /*card ko radius deya hai.*/
+    border-radius: 20px;
+}
+#about .card img{ /*image ko radius deya hai card ki under jo hai.*/
+    border-radius: 20px;
+}
+#about .row h3{ /*card mein heading hai jisme lekha hua hai about ki baari mein wo style kre hai.*/
+    /* font-size: 50px; */
+    font-weight:bold;
+}
+#about .row p{ /*jo paragraph hai vhe about ka usko style kra hai,*/
+    font-weight: bold;
+}
+
+
+
+
+/* Menu Secton Style. */
+#menu{/*menu ko direct puri ko hi pointer kr deya jise cursor lekr jaaye to cursor bna aaye.*/
+    cursor: pointer;
+    transition: 0.5s; /*ye esliye kiya hai wo jo neche hover mein transform lgaya hai uske work ka time deya hai.*/
+}
+#menu .container{ /*direct menu ki container ko top se neche kr deya jise about se thoda neche hojaye.*/
+    padding-top: 40px;
+}
+#menu .heading{ /*jo menu ki heading we serve name se usko style kra hai*/
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom:2px solid #b2744c;
+}
+#menu .heading span{ /*jo heading hai uske under 2 color deya hai uske leye hai ye.*/
+    color: #b2744c;
+}
+#menu .card{ /*jo menu mein card hai uske border ko radius kiya hai*/
+    border-radius: 10px;
+}
+#menu .card:hover{ /*ese kya hoga thoda card mein jo usme effect deya hai*/
+    transform: translatey(-10px);
+}
+#menu .card img{ /*jo card mein image hai usko radius or height de hai*/
+    border-radius: 10px;
+    height: 200px;
+}
+#menu .row h3{ /*menu card mein jo image hai uske neche jo heading hai usko style kra hai*/
+    text-align: center;
+    font-weight: bold;
+} 
+
+
+
+
+/* Product Section Style */
+#product .container{ /*direct container ko neche kiya hai top se jise menu ki card se neche hojaye.*/
+    padding-top: 40px;
+}
+#product .heading{ /*jo product name se heading hai usko style kiya hai.*/
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom:2px solid #b2744c;
+}
+#product .heading span{ /*jo heading hai product name se usko under 2 color deya hai uske leye.*/
+    color: #b2744c;
+}
+#product .card h4{ /*jo card hai uske under humne name deye hai product ki heading ki rupe mein unko style kra hai.*/
+    text-align: center;
+    font-weight: bold;
+}
+#product .card p{ /*product name ki neche price deye hai paragraph tag ki under unko style kra hai,*/
+    color: #b2744c;
+    padding-top: 10px;
+}
+#product .card p span{ /*pragraph ki under add card name se ek icon hai usko style kra hai,*/
+    float: right; /*ese kya hua wo icon right hogya hai.*/
+    cursor: pointer;
+}
+#product .card img{ /*jo product ki image hai unko style kra hai mtlb height de bs*/
+    height: 325px;
+}
+
+
+
+
+/* Gallery Section Style */
+#gallery .container{ /*Direct gallery ki container ko neche kr deya jise product card se neche hojaye.*/
+    padding-top: 40px;
+}
+#gallery .heading{ /*gallery name se heading hai usko style kra hai.*/
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom:2px solid #b2744c;
+}
+#gallery .heading span{ /*gallery heading ki under 2 color deye hai uske leye*/
+    color: #b2744c;
+}
+#gallery .card{ /*gallery ki under jo card bnaye hai unko radius deya hai.*/
+    border-radius: 10px; 
+    margin-bottom: 40px; /*or ese card ki beach mein space aagya kyu ki neche vaale card thoda neche hogye,*/
+}
+#gallery .card img{ /*card mein jo image de hai usko style kra hai.*/
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+
+
+/* Contact Section Style */
+#contact{ /*pure contact section ko hi neche kra hai top se.*/
+    padding-top: 10px;
+}
+#contact .container{ /*contact ki container ko style kra hai*/
+    padding-top: 40px; /*container ko top se neche kra */
+    margin-bottom: 90px; /*usko neche thoda uper kiya*/
+    width: 100%; /*container ki width de*/
+    height: 80vh; /*container ki height de*/
+    background: linear-gradient(90deg, white 80%,#b2744c 20%); /*ye container ko bg color deya or ye bola ki 80% area mein white or baaki mein dusra color ho.*/
+    border-radius: 10px; /*fr container ka radius set kiya.*/
+}
+#contact .heading{ /*contact us name se heading hai usko style kra hai.*/
+    text-align: center;  
+    /* padding-top: 10px; */
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom:2px solid #b2744c;
+}
+#contact .heading span{ /*contact us heading ki under 2 color deye hai uske leye*/
+    color: #b2744c;
+}
+#contact .row input{ /*fr jo form hai jisme input tag hai name email vaale usko style kiya.*/
+    width: 400px; /*uske width set ki */
+    border: none; /*fr uske jo box bne aarhe the unko none kiya*/
+    border-bottom: 1px solid #b2744c; /*box ki jgha ye neche se bs border deya es color ka.*/
+}
+#contact #contact-btn{ /*fr jo submit button hai usko edit kra.*/
+    width: 150px; 
+    height: 40px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    /* border: none; */
+}
+#contact #contact-btn:hover{ /*button mein hover effect deya hai.*/
+    background-color: #b2744c;
+    color: white;
+}
+#contact .row h2{ /*fr jo Info name se heading hai usko edit kra.*/
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
+#contact .row p{ /*fr Info se neche jo address time etc hai usko edit kra.*/
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+#col2{ /*fr jo info ka part hai usko puri ko style kra. usko color deya black or bhi effect deye.*/
+    width: 40%;
+    height: 53vh;
+    background: black;
+    margin-bottom: 60px;
+
+}
+/* ye humne contact section ko responsive bnaya hai. */
+@media screen and (max-width:766px){
+    #contact .container{
+        background:white;
+    }
+    #col2{
+        width: 100%;margin-top: 20px;
+        background: #b2744c;
+
+    }
+    #contact{
+        height: 150vh;
+    }
+}
+@media screen and (max-width:400px){
+    .contact input{
+      width: 250px;
+    }
+}
+
+
+
+/* Blog Sction Style */
+/* #blog{
+    padding-top:100px; 
+} */
+#blog .container{ /*Direct gallery ki container ko neche kr deya jise product card se neche hojaye.*/
+    padding-top: 20px;
+    padding-bottom: 140px;
+}
+#blog .heading{ /*gallery name se heading hai usko style kra hai.*/
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom:2px solid #b2744c;
+}
+#blog .heading span{ /*gallery heading ki under 2 color deye hai uske leye*/
+    color: #b2744c;
+}
+#blog .row .card img{
+    height: 200px;
+}
+#blog .row .card{
+    height: 300px;
+}
+
+
+
+/* footer Section Style */
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    text-align: center;
+    /* margin-bottom: 150px; */
+}
